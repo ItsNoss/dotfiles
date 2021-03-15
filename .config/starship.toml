@@ -1,0 +1,49 @@
+# Don't print a new line
+add_newline = false
+
+# Replace the "❯" symbol in the prompt with "➜"
+[character]                            # The name of the module we are configuring is "character"
+success_symbol = "[➜](bold green)"     # The "success_symbol" segment is being set to "➜" with the color "bold green"
+
+[aws]
+format = 'on [$symbol$profile(\($region\))]($style) '
+style = "bold blue"
+symbol = "🅰 "
+[aws.region_aliases]
+ap-southeast-2 = "au"
+us-east-1 = "va"
+
+[dotnet]
+symbol = "dotnet"
+style = "green"
+heuristic = false
+
+[git_commit]
+commit_hash_length = 4
+tag_symbol = "git commit"
+
+[git_state]
+format = '[\($state( $progress_current of $progress_total)\)]($style) '
+cherry_pick = "[CHERRY PICKING](bold red)"
+
+[git_status]
+conflicted = "🏳"
+ahead = "🏎ahead"
+behind = "😰"
+diverged = "😵"
+untracked = "untracked"
+stashed = "📦"
+modified = "modified"
+staged = '[++\($count\)](green)'
+renamed = "git status"
+deleted = "🗑"
+
+[directory]
+truncation_length = 8
+truncation_symbol = "…/"
+
+[line_break]
+disabled = true
+
+[lua]
+format = "via [🌕 $version](bold blue) "
