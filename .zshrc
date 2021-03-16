@@ -110,4 +110,7 @@ alias .3="cd ../../.."
 alias .4="cd ../../../.."
 alias .5="cd ../../../../.."
 
+# Applications
+alias vemacs="emacs -Q -nw"
+
 eval "$(starship init zsh)"
