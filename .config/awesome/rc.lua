@@ -12,7 +12,6 @@ local wibox = require("wibox")
 -- Theme handling library
 local beautiful = require("beautiful")
 -- Notification library
-local naughty = require("naughty")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
 -- Enable hotkeys help widget for VIM and other apps
@@ -575,5 +574,6 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 beautiful.useless_gap = 4
 
 -- My startup applications
-awful.spawn.with_shell("compton")
+awful.spawn.with_shell("picom")
 awful.spawn.with_shell("nitrogen --restore")
+awful.spawn.with_shell("dunst")
