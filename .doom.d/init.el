@@ -203,6 +203,7 @@
 ;;(global-ligature-mode 't)
 
 (projectile-add-known-project "~/Projects/Websites/Noss")
+(projectile-add-known-project "/srv/http")
 
 ;; Initialize package sources
 (require 'package)

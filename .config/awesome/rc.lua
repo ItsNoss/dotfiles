@@ -49,7 +49,7 @@ beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "alacritty"
-editor = os.getenv("emacs") or "nano"
+editor = "code"
 editor_cmd = terminal .. " -e " .. editor
 
 -- Default modkey.
@@ -286,13 +286,14 @@ globalkeys = gears.table.join(
     
     awful.key({ modkey },            "e",     function () awful.util.spawn("emacs") end, {description = "run emacs", group = "launcher"}),
 
-    awful.key({ modkey },	     "f",     function () awful.util.spawn("firefox") end, {description = "run firefox", group = "launcher"}),
+    awful.key({ modkey },	     "f",     function () awful.util.spawn("filezilla") end, {description = "run filezilla", group = "launcher"}),
 
     awful.key({ modkey },	     "b",     function () awful.util.spawn("brave") end, {description = "run brave", group = "launcher"}),
     
     awful.key({ modkey },	     "d",     function () awful.util.spawn("discord") end, {description = "run discord", group = "launcher"}),
     
     awful.key({ modkey },	     "s",     function () awful.util.spawn("spotify") end, {description = "run spotify", group = "launcher"}),
+    awful.key({ modkey },        "c",     function () awful.util.spawn("code") end, {description = "run VSCode", group = "launcher"}),
     awful.key({ modkey,           }, "l",     function () awful.tag.incmwfact( 0.05)          end,
               {description = "increase master width factor", group = "layout"}),
     awful.key({ modkey,           }, "h",     function () awful.tag.incmwfact(-0.05)          end,
@@ -568,7 +569,6 @@ end)
 
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
--- }}}
 
 -- Gaps
 beautiful.useless_gap = 4
